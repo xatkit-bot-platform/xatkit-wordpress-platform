@@ -1,0 +1,15 @@
+Platform WordPressPlatform
+
+path "edu.uoc.som.jarvis.wordpress.platform.WordPressPlatform"
+
+providers {
+	
+	event RestProvider {
+		event NewComment creates context "comment" {
+			sets parameter action
+			sets parameter user
+			sets parameter comment
+			sets parameter post_title
+		}
+	}
+}

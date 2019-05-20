@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<platform:PlatformDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:platform="edu.uoc.som.jarvis.platform" name="WordPressPlatform" runtimePath="edu.uoc.som.jarvis.wordpress.platform.WordPressPlatform">
+  <eventProviderDefinitions name="RestProvider">
+    <eventDefinitions name="NewComment">
+      <outContexts name="comment">
+        <parameters name="action"/>
+        <parameters name="user"/>
+        <parameters name="comment"/>
+        <parameters name="post_title"/>
+      </outContexts>
+    </eventDefinitions>
+  </eventProviderDefinitions>
+</platform:PlatformDefinition>

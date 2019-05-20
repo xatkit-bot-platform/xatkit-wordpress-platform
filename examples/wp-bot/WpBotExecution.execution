@@ -1,0 +1,8 @@
+import platform "/WordPressPlatform/WordPressPlatform.xmi"
+import platform "SlackPlatform"
+
+use provider WordPressPlatform.RestProvider
+
+// Note: the channel should be updated based on the workspace used to deploy the bot
+on intent NewComment do
+	action SlackPlatform.PostMessage(message : context(comment).get("user") + " posted a comment on \"" + context(comment).get("post_title") + "\":\n" + context(comment).get("comment"), channel : "CJUUKKUF7")

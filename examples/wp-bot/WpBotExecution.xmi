@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="edu.uoc.som.jarvis.common" xmlns:execution="edu.uoc.som.jarvis.execution">
+  <eventProviderDefinitions href="file:/C:/Users/Gwendal/Documents/Dev/jarvis-org/jarvis-wordpress-platform/platform/WordPressPlatform.xmi#//@eventProviderDefinitions.0"/>
+  <executionRules>
+    <event href="file:/C:/Users/Gwendal/Documents/Dev/jarvis-org/jarvis-wordpress-platform/platform/WordPressPlatform.xmi#//@eventProviderDefinitions.0/@eventDefinitions.0"/>
+    <instructions xsi:type="execution:ActionInstance">
+      <action href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3"/>
+      <values>
+        <parameter href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3/@parameters.0"/>
+        <expression xsi:type="common:OperationCall" name="+">
+          <source xsi:type="common:OperationCall" name="get">
+            <source xsi:type="common:ContextAccess" contextName="comment"/>
+            <args xsi:type="common:StringLiteral" value="user"/>
+          </source>
+          <args xsi:type="common:OperationCall" name="+">
+            <source xsi:type="common:StringLiteral" value=" posted a comment on &quot;"/>
+            <args xsi:type="common:OperationCall" name="+">
+              <source xsi:type="common:OperationCall" name="get">
+                <source xsi:type="common:ContextAccess" contextName="comment"/>
+                <args xsi:type="common:StringLiteral" value="post_title"/>
+              </source>
+              <args xsi:type="common:OperationCall" name="+">
+                <source xsi:type="common:StringLiteral" value="&quot;:&#xA;"/>
+                <args xsi:type="common:OperationCall" name="get">
+                  <source xsi:type="common:ContextAccess" contextName="comment"/>
+                  <args xsi:type="common:StringLiteral" value="comment"/>
+                </args>
+              </args>
+            </args>
+          </args>
+        </expression>
+      </values>
+      <values>
+        <parameter href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3/@parameters.1"/>
+        <expression xsi:type="common:StringLiteral" value="CJUUKKUF7"/>
+      </values>
+    </instructions>
+  </executionRules>
+  <imports xsi:type="common:PlatformImportDeclaration" path="/WordPressPlatform/WordPressPlatform.xmi"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="SlackPlatform"/>
+</execution:ExecutionModel>
