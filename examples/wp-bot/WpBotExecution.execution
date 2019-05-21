@@ -1,4 +1,4 @@
-import platform "/WordPressPlatform/WordPressPlatform.xmi"
+import platform "/WordPressPlatform/WordPressPlatform.xmi" as WP
 import platform "SlackPlatform"
 
 use provider WordPressPlatform.RestProvider

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="edu.uoc.som.jarvis.common" xmlns:execution="edu.uoc.som.jarvis.execution">
-  <eventProviderDefinitions href="file:/C:/Users/Gwendal/Documents/Dev/jarvis-org/jarvis-wordpress-platform/platform/WordPressPlatform.xmi#//@eventProviderDefinitions.0"/>
+  <eventProviderDefinitions href="pathmap://JARVIS_CUSTOM_PLATFORM/WP#//@eventProviderDefinitions.0"/>
   <executionRules>
-    <event href="file:/C:/Users/Gwendal/Documents/Dev/jarvis-org/jarvis-wordpress-platform/platform/WordPressPlatform.xmi#//@eventProviderDefinitions.0/@eventDefinitions.0"/>
+    <event href="pathmap://JARVIS_CUSTOM_PLATFORM/WP#//@eventProviderDefinitions.0/@eventDefinitions.0"/>
     <instructions xsi:type="execution:ActionInstance">
       <action href="pathmap://JARVIS_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3"/>
       <values>
@@ -36,6 +36,6 @@
       </values>
     </instructions>
   </executionRules>
-  <imports xsi:type="common:PlatformImportDeclaration" path="/WordPressPlatform/WordPressPlatform.xmi"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="/WordPressPlatform/WordPressPlatform.xmi" alias="WP"/>
   <imports xsi:type="common:PlatformImportDeclaration" path="SlackPlatform"/>
 </execution:ExecutionModel>
