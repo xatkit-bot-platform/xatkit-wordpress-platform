@@ -1,13 +1,13 @@
-# jarvis-wordpress-platform
-A Jarvis platform to receive events from WordPress
+# xatkit-wordpress-platform
+A Xatkit platform to receive events from WordPress
 
 
 
 ## Send a NewComment event
 
-You can trigger a NewComment event by performing the following REST query on the Jarvis server:
+You can trigger a NewComment event by performing the following REST query on the Xatkit server:
 
-URL: <jarvis server url>:<jarvis server port>
+URL: <xatkit server url>:<xatkit server port>
 
 Type: POST
 
