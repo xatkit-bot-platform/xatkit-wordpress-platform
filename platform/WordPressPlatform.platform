@@ -1,6 +1,6 @@
 Platform WordPressPlatform
 
-path "edu.uoc.som.jarvis.wordpress.platform.WordPressPlatform"
+path "com.xatkit.plugins.wordpress.platform.WordPressPlatform"
 
 providers {
 	
