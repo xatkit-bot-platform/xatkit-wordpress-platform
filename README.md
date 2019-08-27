@@ -17,7 +17,7 @@ The WordPress platform define the following providers:
 
 | Event                               | Context                | Parameters | Description                                                  |
 | ----------------------------------- | ---------------------- | ---------- | ------------------------------------------------------------ |
-| NewComment                        | `comment`                | - `action`: the action associated to the comment (e.g. `"created"`)<br/>- `user`: the user who created a new comment</br>- `comment`: the content of the comment<br/>- `post_title`: the title of the post where the comment has been sent       | Event sent when a new comment is posted on a post    |
+| NewComment                        | `comment`                | - `action`: the action associated to the comment (e.g. `"created"`)<br/>- `user`: the user who created a new comment<br/>- `comment`: the content of the comment<br/>- `post_title`: the title of the post where the comment has been sent       | Event sent when a new comment is posted on a post    |
 
 ## Actions
 
