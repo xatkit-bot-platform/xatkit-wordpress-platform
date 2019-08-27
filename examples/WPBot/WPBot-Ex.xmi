@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <execution:ExecutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="com.xatkit.common" xmlns:execution="com.xatkit.execution">
-  <eventProviderDefinitions href="../WordPressPlatform/WordPressPlatform.xmi#//@eventProviderDefinitions.0"/>
+  <eventProviderDefinitions href="pathmap://XATKIT_CORE_PLATFORM/WordPressPlatform.xmi#//@eventProviderDefinitions.0"/>
   <executionRules>
-    <event href="../WordPressPlatform/WordPressPlatform.xmi#//@eventProviderDefinitions.0/@eventDefinitions.0"/>
+    <event href="pathmap://XATKIT_CORE_PLATFORM/WordPressPlatform.xmi#//@eventProviderDefinitions.0/@eventDefinitions.0"/>
     <instructions xsi:type="execution:ActionInstance">
-      <action href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3"/>
+      <action href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.13"/>
       <values>
-        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3/@parameters.0"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.13/@parameters.0"/>
         <expression xsi:type="common:OperationCall" name="+">
           <source xsi:type="common:OperationCall" name="get">
             <source xsi:type="common:ContextAccess" contextName="comment"/>
@@ -31,11 +31,11 @@
         </expression>
       </values>
       <values>
-        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.3/@parameters.1"/>
-        <expression xsi:type="common:StringLiteral" value="CJUUKKUF7"/>
+        <parameter href="pathmap://XATKIT_CORE_PLATFORM/SlackPlatform.xmi#//@actions.13/@parameters.1"/>
+        <expression xsi:type="common:ConfigAccess" keyName="slack.channel"/>
       </values>
     </instructions>
   </executionRules>
-  <imports xsi:type="common:PlatformImportDeclaration" path="/WordPressPlatform/WordPressPlatform.xmi" alias="WP"/>
+  <imports xsi:type="common:PlatformImportDeclaration" path="WordPressPlatform"/>
   <imports xsi:type="common:PlatformImportDeclaration" path="SlackPlatform"/>
 </execution:ExecutionModel>
