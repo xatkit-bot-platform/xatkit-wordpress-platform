@@ -15,7 +15,7 @@ The WordPress platform define the following providers:
 | -------------------------- | ----- | ------------------ | ------------------------------------------------------------ |
 | RestProvider | Event | -                  | Receive webhook events from the WordPress and translate them into Xatkit-compatible events. |
 
-### GithubWebhookEventProvider Events
+### RestProvider Events
 
 | Event                               | Context                | Parameters | Description                                                  |
 | ----------------------------------- | ---------------------- | ---------- | ------------------------------------------------------------ |
